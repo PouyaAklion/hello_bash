@@ -137,3 +137,90 @@ this is multi line comment'                    #Multi line commenting
 # ls +al >stdout.txt 2>&1                             #Save standard outpur and standard output in same file
 # ls -al >& stdout.txt                                #Save standard outpur and standard output in same file
 
+#@@@ Export and send data between bash scripts:
+#message="hi i am learning bash script this messege from hello script"
+#export message
+#./second_script.sh
+
+#@@@ Work with Strings:
+#echo "Enter str1:"
+#read str1
+#echo "Enter str2:"
+#read str2
+#
+#if [ "$str1" == "$str2" ];then
+#    echo "Strins are same"
+#elif [ "$str1" \< "$str2" ];then
+#    echo "Str1 is samller than str2"
+#elif [ "$str1" \> "$str2" ];then
+#    echo "Str1 is grater then str2"
+#fi
+#
+#echo $str1$str2
+#echo ${str1^}                                #Convert string to lowercase
+#echo ${str1^^}                               #Convert string to Uppercase
+#echo ${str1^l}                               #Convert string to titecase
+
+#@@@ experesions:
+#a=5
+#b=3
+#echo $(( a+b ))
+#echo $(( a-b ))
+#echo $(( a*b ))
+#echo $(( a/b ))
+#echo $(( a%b ))
+#
+#echo $(expr $a + $b )
+#echo $(expr $a - $b )
+#echo $(expr $a \* $b )
+#echo $(expr $a / $b )
+#echo $(expr $a % $b )
+
+#@@@ Array:
+#names=('pouya' 'pariya' 'mehdi' 'hasan')
+#echo ${names[@]}
+#echo ${names[0]}
+#unset names[2]
+#names[3]='ali'
+#echo ${!names[@]}                   #indexis of array
+#echo ${#names[@]}                   #Length of array
+
+
+#@@@ Functions:
+#function func(){
+#    echo $1 $2 $3
+#}
+#func 1 88 9
+
+#@@@ file and directories:
+#mkdir -p newfolder
+#if [ -d newfolder ];then
+#    echo "folder exist"
+#else
+#    echo "folder doesn't exist"
+#fi
+
+#echo "Enter filename:"
+#read filename
+#if [ -f newfolder/$filename ];then
+#    echo "file exist"
+#else
+#    touch newfolder/$filename
+#    echo "file has been created"
+#fi
+
+#echo "this text should be append to file">>newfolder/$filename
+#echo "this text should be append to file 2">>newfolder/$filename
+#echo "this text should be append to file 3">>newfolder/$filename
+
+#while IFS= read -r line
+#do
+#    echo $line
+#done < newfolder/$filename
+
+
+
+
+
+
+

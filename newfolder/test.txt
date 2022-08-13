@@ -1,0 +1,3 @@
+this text should be append to file
+this text should be append to file 2
+this text should be append to file 3

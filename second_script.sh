@@ -1,0 +1,1 @@
+echo "Messege from hello_script is $message"
