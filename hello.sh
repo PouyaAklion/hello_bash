@@ -218,9 +218,52 @@ this is multi line comment'                    #Multi line commenting
 #    echo $line
 #done < newfolder/$filename
 
+#@@@ Select loop
+#movies=("Batman" "Beautiful mind" "Parasite" "5 angry")
+#select movie in "${movies[@]}"
+#do 
+#    echo  You have selected $movie 
+#    case $movie in
+#        'Batman')
+#            echo 'Bataman selected';;
+#        'Beautiful mind')
+#            echo 'Beautiful mind selected';;
+#        'Parasite')
+#            echo 'Parasite selected';;
+#        '5 angry mans')
+#            echo '5 angry man selected';;
+#        *)
+#            echo  Error! Please enter number between 1-"${#movies[@]}"
+#    esac
+#
+#done
+
+#@@@ Waiting for user input
+#echo "Press any key to continue"
+#while [ true ]
+#do
+#    read -t 3 -n 1
+#    if [ $? = 0 ];then
+#        echo "You have terminated the script"
+#        exit
+#    else
+#        echo "waiting for your input"
+#    fi
+#done
+
+#@@@ TO Watch file and directories you can you inotify 
+
+#@@@ use grep to find and search for stirngs it is powerfull 
+# grep -i -n -c -v $filename
 
 
+#@@@ AWK: awk is tool and program to report text based files
 
+# awk -F ";" '{print $1 $2}' Hello.txt            # default delimetere is ' ' os -F change it
+# awk 'BEGIN{FS=";"; OFS="__"} {print $1,$2}' Hello.txt #OFS is output column delimeter
+# df | awk '/\/dev\/loop/'                           # searching for a pattern
+# awk -F ";" '{if($1=="Username") print $1}' Hello.txt
+#awk -F ";" '$1 ~ /^[a,b]/ {print $0}' Hello.txt        # if first column start with 'b' or 'a' return all row
 
 
 
