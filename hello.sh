@@ -265,5 +265,19 @@ this is multi line comment'                    #Multi line commenting
 # awk -F ";" '{if($1=="Username") print $1}' Hello.txt
 #awk -F ";" '$1 ~ /^[a,b]/ {print $0}' Hello.txt        # if first column start with 'b' or 'a' return all row
 
+#@@@ SED: tool for subsitute text and strings
+# sed /hello/salam/g $filename
+# cat text.txt | sed /hi/hey/g
+# sed -i /hello/salam/g $filename                       #this is change file content also
 
+#@@@ debuging:
+#for debuging you can use 3 method :
+#1. run script with -x 
+#2. inser -x in the first line of script :  # /usr/bin/bahs -x
+#3. use set -x and set +x keyword:
+#set -x 
+#echo "This section will be output as debuging mode"
+#var=55
+#echo df | awk -v num=$var 'BEGIN{OFS="_";FS=","} match($1,num) {print $1,$2}'
+#set +x
 
